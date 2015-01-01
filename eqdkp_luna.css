@@ -1258,8 +1258,6 @@ div[aria-describedby="dialog-login"] .password-forgot{
 background: url('TEMPLATE_IMAGE_PATH/background.png') repeat scroll center top transparent;
 }
 
-.ui-tooltip { box-shadow: none !important; }
-
 /* general: information boxes NEW */
 .infobox {
 	background-color: #F5F5F5;
@@ -2348,7 +2346,8 @@ div.error { display: none; }
 	color: #9f9f9f;
 }
 
-.article_content{
+.article_detail_container .tags-container { padding-top: 10px; }
+.article_content {
 	line-height: 16px;
 }
 .article_content p {
@@ -2366,7 +2365,7 @@ div.error { display: none; }
 	position:relative;
 }
 
-.contentSideRight{
+.contentSideRight {
 	text-align: left;
 	border-left: 1px solid #ccc;
 	padding: 15px;
@@ -3553,3 +3552,7 @@ border-top: 1px solid rgba(204, 204, 204, 0.3);
 .sortable li.mjs-nestedSortable-branch div .eye:before, .sortable li.mjs-nestedSortable-leaf div .eye:before {
     color: #FFF;
 }
+
+/* Timline Plugin */
+.timeline-years { color: #FFF !important; }
+.timeline-dateblock:before { background: #273D81 !important; }
