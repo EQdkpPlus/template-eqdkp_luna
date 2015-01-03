@@ -317,11 +317,6 @@ h3 {
 }
 
 /* Header and Site-Titles */
-#wrapper header {
-	background: url(images/background-head.svg) no-repeat scroll center top transparent;
-	background-size: 100%;
-}
-
 #header {
 	text-align:center;
 	min-height:140px;
