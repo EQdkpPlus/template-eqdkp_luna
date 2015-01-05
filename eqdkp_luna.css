@@ -3532,7 +3532,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	  overflow: hidden;
 	}
 	
-	.mainmenu-mobile a, .adminmenu-mobile a {
+	.mainmenu-mobile a, .adminmenu-mobile a, .admin-headline a {
 		color:#4E7FA8;
 	}
 }
