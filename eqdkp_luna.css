@@ -957,8 +957,6 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 #contentBody th, .portalbox_content th {
 background: url('TEMPLATE_IMAGE_PATH/head.jpg') repeat-x scroll 0% 0% #2B577C;
 color: #FFF;
-font-size: 11px;
-font-weight: bold;
 height: 25px;
 white-space: nowrap;
 text-align: left;
@@ -1013,12 +1011,12 @@ padding-right: 8px;
 
 #contentBody th a {
 	text-decoration: none;
-	color: #C5E5FF;
+	color: #fff;
 	font-family:'Trebuchet MS',Arial,sans-serif;
 }
 
 #contentBody th a:hover {
-	color: #fff;
+	color: #c5e5ff;
 }
 
 .contentDivider {
@@ -1416,11 +1414,11 @@ ul.breamcrumb a {
 	padding: .7em 1em .7em 2em;
 	float: left;
 	text-decoration: none;
-	color: #1E276E;
+	color: #fff;
 	position: relative;
-	text-shadow: 0 1px 0 rgba(255,255,255,.5);
-	background-color: #CCD7F8;
-background-image: linear-gradient(to right, #6288C9, #CCD7F8);
+	/* text-shadow: 0 1px 0 rgba(255,255,255,.5); */
+	background-color: #fff;
+background-image: linear-gradient(to right, #2b577c, #266399);
 }
 
 ul.breamcrumb li:first-child a{
@@ -1435,7 +1433,7 @@ ul.breamcrumb li:first-child a i {
 }
 
 ul.breamcrumb a:hover{
-	background: #E3E3E3;
+	background: #266399;
 }
 
 ul.breamcrumb a::after,
@@ -1452,17 +1450,17 @@ ul.breamcrumb a::before{
 
 ul.breamcrumb a::after{
 	z-index: 2;
-	border-left-color: #CCD7F8;
+	border-left-color: #266399;
 }
 
 ul.breamcrumb a::before{
-	border-left-color: #122086;
+	border-left-color: #9f9f9f;
 	right: -1.1em;
 	z-index: 1;
 }
 
 ul.breamcrumb a:hover::after{
-	border-left-color: #E3E3E3;
+	border-left-color: #266399;
 }
 
 ul.breamcrumb .current,
@@ -1645,19 +1643,28 @@ ul.breamcrumb .current::before{
 	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 .mainmenu li li a, .mainmenu li li a:visited{
-	margin-left: -3px;
+	/* margin-left: -3px; */
+	border-radius: 0px;
 }
 .mainmenu li li:first-child a, .mainmenu li li:first-child a:visited, .mainmenu li li li:first-child a, .mainmenu li li:first-child a:visited {
-border-top-left-radius: 10px !important;
-border-top-right-radius: 10px !important;
-border-bottom-left-radius: 0px !important;
-border-bottom-right-radius: 0px !important;
+
+	border-top-left-radius: 3px !important;
+	border-top-right-radius: 3px !important;
+	/*
+	border-bottom-left-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
 	margin-left: -3px;
+	*/
 }
+
 .mainmenu li li:last-child a, .mainmenu li li:last-child a:visited, .mainmenu li li li:last-child a, .mainmenu li li:last-child a:visited {
-border-bottom-left-radius: 10px;
-border-bottom-right-radius: 10px;
+
+	border-bottom-left-radius: 3px !important;
+	border-bottom-right-radius: 3px !important;
+	border-bottom: 1px solid #999;
+	/*
 	margin-left: -3px;
+	*/
 }
 
 
@@ -1676,7 +1683,7 @@ border-bottom-right-radius: 10px;
 border-radius: 13px;*/
 }
 .mainmenu li li li {
-	margin-left: 2px;
+	margin-left: -5px;
 }
 .mainmenu li li a,.mainmenu li li li a {
 	font-size: 11px;
@@ -1889,6 +1896,7 @@ border-radius: 13px;*/
 	width:24px;
 	height:24px;
 	color: #CBCBCB;
+	fill: #CBCBCB;
 }
 
 /* ACP: index, rss notifications */
@@ -3383,14 +3391,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 
 	/* Mobile Navigation */
 	.nav-mobile {
-		background: #45484d; /* Old browsers */
-		background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, #45484d 0%,#000000 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top, #45484d 0%,#000000 100%); /* IE10+ */
-		background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+		background: rgba(66, 66, 66, 0.8);
 		width: 100%;
 		min-height: 3em;
 	}
@@ -3455,11 +3456,6 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		font-weight: normal;
 		font-size: 15px;
 		margin-top: 6px;
-	}
-
-	#admininfos_tabs div, #admininfos_tabs div div {
-		float: none;
-		width: 95% !important;
 	}
 
 	table.scrollable-x {
@@ -3534,6 +3530,10 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	  height: 0;
 	  margin: 10px 0;
 	  overflow: hidden;
+	}
+	
+	.mainmenu-mobile a, .adminmenu-mobile a {
+		color:#4E7FA8;
 	}
 }
 

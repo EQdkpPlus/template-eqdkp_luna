@@ -401,26 +401,27 @@
 				{MAIN_MENU}
 				<div class="clear noheight">&nbsp;</div>
 			</div>
-			<div class="hiddenDesktop nav-mobile">
-				<i class="fa fa-list hand" onclick="$('.nav-mobile-overlay').toggle();"></i>
-				<div class="nav-mobile-overlay">
-					<div class="nav-mobile-closebtn" onclick="$('.nav-mobile-overlay').toggle();">
-						<i class="fa fa-lg fa-times hand"></i>
-					</div>
-				{MAIN_MENU_MOBILE}
-				<!-- IF S_IN_ADMIN -->
-				<div class="admin-headline"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</div>
-				{ADMIN_MENU_MOBILE}
-				<!-- ELSE -->
-				<!-- IF S_ADMIN --><div class="admin-headline"><a href="{EQDKP_ROOT_PATH}admin/{SID}"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</a></div><!-- ENDIF -->
-				<!-- ENDIF -->
-				</div>
-			</div>
 		</div><!-- close mainmenu -->
 		<section id="contentContainer">
 			<a id="content"></a>
 			<header>
 				<nav id="nav">
+					<div class="hiddenDesktop nav-mobile">
+						<i class="fa fa-list hand" onclick="$('.nav-mobile-overlay').toggle();"></i>
+						<div class="nav-mobile-overlay">
+							<div class="nav-mobile-closebtn" onclick="$('.nav-mobile-overlay').toggle();">
+								<i class="fa fa-lg fa-times hand"></i>
+							</div>
+						{MAIN_MENU_MOBILE}
+						<!-- IF S_IN_ADMIN -->
+						<div class="admin-headline"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</div>
+						{ADMIN_MENU_MOBILE}
+						<!-- ELSE -->
+						<!-- IF S_ADMIN --><div class="admin-headline"><a href="{EQDKP_ROOT_PATH}admin/{SID}"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</a></div><!-- ENDIF -->
+						<!-- ENDIF -->
+						</div>
+					</div>
+				
 					<!-- IF S_IN_ADMIN -->
 					<div id="adminmenu">
 						<div class="hiddenSmartphone">
