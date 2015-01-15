@@ -1844,7 +1844,7 @@ border-radius: 13px;*/
 	background: none;
 }
 .sf-btn-ddm > li a, .sf-btn-ddm > li a:visited{
-	color: #d9eef7 !important;
+	color: #fff !important;
 	padding: 0.25em 0.5em;
 }
 .sf-btn-ddm a:hover {
@@ -3576,7 +3576,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	}
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 590px) {
 
 	.responsive fieldset.settings dd, .responsive fieldset.settings dt{
 		display:block;
