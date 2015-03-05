@@ -1201,6 +1201,7 @@ img {
 .notify_default {
 	background: rgba(0, 0, 0, 0.6) !important;
 	min-height: 50px;
+	color: #fff;
 }
 .ui-notify-message {
 	text-align:left;
@@ -2054,6 +2055,10 @@ overflow: auto;
 	font-size: 16px;
 }
 
+.article-container.featured {
+	display: block;
+}
+
 .article-container.featured h2:before {
 	content: "\f005";
 	font-family: FontAwesome;
@@ -2845,7 +2850,7 @@ ul#mychars-points-tooltip.dropdown-menu li table tbody tr td a {
 	max-height: 16px;
 }
 
-.fe-tooltip-container, .notification-tooltip-container, .user-tooltip-container,.mychars-points-tooltip-container {
+.fe-tooltip-container, .notification-tooltip-container, .user-tooltip-container, .mychars-points-tooltip-container, .langswitch-tooltip-container {
 	display: inline;
 	position: relative;
 }
@@ -2858,7 +2863,7 @@ ul#mychars-points-tooltip.dropdown-menu li table tbody tr td a {
 	min-width: 160px;
 }
 
-.fe-tooltip, .notification-tooltip, .user-tooltip, .mychars-points-tooltip {
+.fe-tooltip, .notification-tooltip, .user-tooltip, .mychars-points-tooltip, .langswitch-tooltip {
 	display: none;
 	text-align: left;
 }
@@ -3263,7 +3268,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		font-size: 24px;
 	}
 
-	.responsive .notification-tooltip-container {
+	.responsive .notification-tooltip-container, .responsive .langswitch-tooltip-container {
 		position: static;
 	}
 
@@ -3589,6 +3594,10 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 
 	.responsive .ui-notify {
 		max-width: 95%;
+	}
+	
+	.responsive .langswitch-tooltip-trigger > span {
+		display: none;
 	}
 }
 
