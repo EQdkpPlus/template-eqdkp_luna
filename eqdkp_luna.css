@@ -385,7 +385,6 @@ margin-bottom: 20px;
 	margin-left: 35px;
 	border: 1px solid #AAA;
 	background: rgba(66, 66, 66, 0.8);
-	padding-bottom: 20px;
 	border-radius: 3px;
 	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
@@ -405,14 +404,6 @@ margin-bottom: 20px;
 }
 
 #contentFooter {
-	background: #45484d; /* Old browsers */
-	background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #45484d 0%,#000000 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #45484d 0%,#000000 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 	min-height: 2.5em;
 	line-height: 2.5em;
 	padding-right: 5px;
@@ -420,11 +411,12 @@ margin-bottom: 20px;
 }
 
 #contentFooter a, #contentFooter a:visited, #contentFooter a:hover{
-	color: #fff;
+	color: #605D5D;
 	text-decoration: none;
 }
 
 #contentFooter a:hover {
+	color: #fff;
 	text-decoration: underline;
 }
 #contentFooter .dropdown-menu, #contentFooter .dropdown-menu a{
