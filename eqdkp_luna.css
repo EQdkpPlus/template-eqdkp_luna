@@ -41,63 +41,36 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
 
-.fa-twitter-square{color: #FFF;background-color: #00A5FF;width: 19px;border-radius: 50%;}
-.fa-facebook-square{color: #156EE1;background-color: #FFF;width: 18px;border-radius: 50%;}
-.fa-google-plus-square{color: #E11556;}
-.article-container .fa-cog {color: #959595;}
+/* LESS VARS */
+//@styleFontColor : saturate(@eqdkpBodyFontColor, 20);
+
 
  /* icon styles */
-.icon-grey{
-	color:#6E6E6E;
-}
+.icon-grey { color:#6E6E6E; }
+.icon-sm1 { font-size:0.8em; }
+.icon-sm2 { font-size:0.6em; }
+.icon-sm3 { font-size:0.5em; }
+.icon-red { color: red; }
 
-.icon-sm1{
-	font-size:0.8em;
-}
-
-.icon-sm2{
-	font-size:0.6em;
-}
-
-.icon-sm3{
-	font-size:0.5em;
-}
-
-.icon-red {
-	color: red;
-}
+.fa-twitter-square {color: #FFF; background-color: #00A5FF; width: 19px; border-radius: 50%;}
+.fa-facebook-square {color: #156EE1; background-color: #FFF; width: 18px; border-radius: 50%;}
+.fa-google-plus-square {color: #E11556;}
+.article-container .fa-cog {color: #959595;}
 
 /* body */
-html {
-	min-height: 100%;
-}
+html { min-height: 100%; }
 body {
-	background: url('TEMPLATE_BACKGROUND') no-repeat T_BACKGROUND_POSITION center top T_BODY_BACKGROUND;
-	font-size: 13px;
-	font-family: Tahoma,Arial,Verdana,sans-serif;
-	color: #eee;
+	background: url('@{eqdkpBackgroundImage}') no-repeat @eqdkpBackgroundImagePosition center top @eqdkpBodyBackgroundColor;
+	font-size: @eqdkpBodyFontSize;
+	font-family: @eqdkpBodyFontFamily;
+	color: @eqdkpBodyFontColor;
 	text-align: center;
 }
 
@@ -115,19 +88,9 @@ h1, h2, h3 {
 	margin-top: 5px;
 }
 
-h1 {
-	font-size: 20px;
-}
-
-h2 {
-	font-size: 18px;
-}
-
-h3 {
-	font-size: 14px;
-	border-bottom: none;
-	margin-bottom: 5px;
-}
+h1 { font-size: 20px; }
+h2 { font-size: 18px; }
+h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 
 
 /* personal area */
@@ -218,29 +181,22 @@ h3 {
 /* footer */
 #footer {
 	text-align: center;
-	color: #fff;
+	color: @eqdkpBodyLinkColor;
 	font-family:'Trebuchet MS',Arial,sans-serif;
 	font-size: 12px;
 	margin-top: 20px;
 }
-
-.copyright {
-	color: #FFF;
-}
+.copyright { color: @eqdkpBodyLinkColor; }
 #footer a, copyright a {
-	color: #FFF;
+	color: @eqdkpBodyLinkColor;
 	text-decoration:none;
 }
 #footer a:hover, copyright a:hover, #impressum:hover {
-	color: #fff;
+	color: @eqdkpBodyLinkColorHover;
 	text-decoration:underline;
 }
-#dialog_disclaimer{
-	display: none;
-}
-#impressum{
-	margin: 0px 0px 10px 0px;
-}
+#dialog_disclaimer { display: none; }
+#impressum { margin: 0px 0px 10px 0px; }
 
 /* General Portal Layout */
 .portal .column {
@@ -283,7 +239,7 @@ h3 {
 }
 
 .fixed_width #wrapper {
-	min-width: T_PORTAL_WIDTH !important;
+	min-width: @eqdkpPortalWidth !important;
 }
 
 #wrapper {
@@ -295,15 +251,15 @@ h3 {
 }
 
 .fixed_width #wrapper .portal .second {
-	width: T_PORTAL_WIDTH_WITHOUT_BOTH_COLUMNS !important;
+	width: @eqdkpPortalWidthWithoutBothColumns !important;
 }
 
 .fixed_width #wrapper .portal .second.no_third_column {
-	width: T_PORTAL_WIDTH_WITHOUT_LEFT_COLUMN !important;
+	width: @eqdkpPortalWidthWithoutLeftColumn !important;
 }
 
 .fixed_width #personalAreaInner {
-	width: T_PORTAL_WIDTH !important;
+	width: @eqdkpPortalWidth !important;
 	margin: auto;
 }
 
@@ -451,7 +407,7 @@ margin-bottom: 20px;
 	white-space: nowrap;
 overflow: hidden;
 color: #FFF;
-background: url('TEMPLATE_IMAGE_PATH/head.jpg') repeat-x scroll 0% 0% #2B577C;
+background: url('@{eqdkpTemplateImagePath}head.jpg') repeat-x scroll 0% 0% #2B577C;
 height: 28px;
 line-height: 28px;
 font-weight: bold;
@@ -561,13 +517,13 @@ a:hover {
 
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
 	border-radius: 4px 4px 4px 4px;
-	color: #555555;
+	color: @eqdkpInputFontColor;
 	font-size: 13px;
 	line-height: 20px;
 	padding: 4px 6px;
 	vertical-align: middle;
-	background-color: #FFFFFF;
-	border: 1px solid #CCCCCC;
+	background-color: @eqdkpInputBackgroundColor;
+	border: 1px solid @eqdkpInputBorderColor;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
 	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
 	font-family: Tahoma,Arial,Verdana,sans-serif;
@@ -575,8 +531,10 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 }
 
 select:focus, textarea:focus, input:focus {
-	border-color: rgba(82, 168, 236, 0.8);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+	color: @eqdkpInputFontColorActive;
+	background-color: @eqdkpInputBackgroundColorActive;
+	border-color: @eqdkpInputBorderColorActive;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px fadeout(@eqdkpInputBorderColorActive, 20);
 	outline: 0 none;
 }
 
@@ -847,30 +805,33 @@ select[readonly], textarea[readonly], input[type="text"][readonly], input[type="
 
 /* blue */
 a.blue, a.blue:hover, a.button, a.button:hover {
-	color: #d9eef7;
+	color: @eqdkpButtonFontColor;
 	line-height: 15px;
 }
 
 .blue, .button, input[type="submit"], input[type="button"], input[type="reset"], button {
-	color: #d9eef7;
-	border: solid 1px #0076a3;
-	background: #0095cd;
-	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
-	background: -moz-linear-gradient(top, #00adee, #0078a5);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+	color: @eqdkpButtonFontColor;
+	border: solid 1px @eqdkpButtonBorderColor;
+	background: @eqdkpButtonBackgroundColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@eqdkpButtonBackgroundColor), to(darken(@eqdkpButtonBackgroundColor, 20)));
+	background: -moz-linear-gradient(top, @eqdkpButtonBackgroundColor, darken(@eqdkpButtonBackgroundColor, 20));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@eqdkpButtonBackgroundColor', endColorstr='darken(@eqdkpButtonBackgroundColor, 20)');
 }
 .blue:hover, .button:hover, input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:not(.ui-widget):hover {
-	color: #d9eef7;
-	background: #007ead;
-	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
-	background: -moz-linear-gradient(top, #0095cc, #00678e);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+	color: @eqdkpButtonFontColorHover;
+	background:@eqdkpButtonBackgroundColorHover;
+	background: -webkit-gradient(linear, left top, left bottom, from(@eqdkpButtonBackgroundColorHover), to(darken(@eqdkpButtonBackgroundColorHover, 20)));
+	background: -moz-linear-gradient(top, @eqdkpButtonBackgroundColorHover, darken(@eqdkpButtonBackgroundColorHover, 20));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@eqdkpButtonBackgroundColorHover', endColorstr='darken(@eqdkpButtonBackgroundColorHover, 20)');
+	border-color: @eqdkpButtonBorderColorHover;
 }
 .blue:active, .button:hover, input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active, button:not(.ui-widget):active {
-	color: #80bed6;
-	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
-	background: -moz-linear-gradient(top, #0078a5, #00adee);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+	color: @eqdkpButtonFontColorHover;
+	background:@eqdkpButtonBackgroundColorHover;
+	background: -webkit-gradient(linear, left top, left bottom, from(@eqdkpButtonBackgroundColorHover), to(darken(@eqdkpButtonBackgroundColorHover, 20)));
+	background: -moz-linear-gradient(top, @eqdkpButtonBackgroundColorHover, darken(@eqdkpButtonBackgroundColorHover, 20));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@eqdkpButtonBackgroundColorHover', endColorstr='darken(@eqdkpButtonBackgroundColorHover, 20)');
+	border-color: @eqdkpButtonBorderColorHover;
 }
 
 /* green */
@@ -989,7 +950,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 }
 
 #contentBody th, .portalbox_content th {
-background: url('TEMPLATE_IMAGE_PATH/head.jpg') repeat-x scroll 0% 0% #2B577C;
+background: url('@{eqdkpTemplateImagePath}head.jpg') repeat-x scroll 0% 0% #2B577C;
 color: #FFF;
 height: 25px;
 white-space: nowrap;
@@ -1258,7 +1219,7 @@ div[aria-describedby="dialog-login"] .password-forgot{
 .ui-progressbar{margin-bottom: 3px;}
 .ui-dialog .ui-widget-header {
 	border: 1px solid #868686;
-	background: url('TEMPLATE_IMAGE_PATH/ui-bg_highlight-soft_44_444444_1x100.png') repeat-x scroll 50% 50% #444;
+	background: url('@{eqdkpTemplateImagePath}ui-bg_highlight-soft_44_444444_1x100.png') repeat-x scroll 50% 50% #444;
 	border-radius: 6px;
 	font-family: 'Trebuchet MS',Arial,sans-serif;
 	font-size: 20px;
@@ -1268,7 +1229,7 @@ div[aria-describedby="dialog-login"] .password-forgot{
 }
 .ui-tabs ul.ui-tabs-nav {
 	border: 1px solid #333;
-	background: url('TEMPLATE_IMAGE_PATH/ui-bg_highlight-soft_44_444444_1x100.png') repeat-x scroll 50% 50% #444;
+	background: url('@{eqdkpTemplateImagePath}ui-bg_highlight-soft_44_444444_1x100.png') repeat-x scroll 50% 50% #444;
 	border-radius: 6px;
 }
 
@@ -1666,7 +1627,7 @@ ul.breamcrumb .current::before{
 	color: #D9D7D7;
 }
 .mainmenu a, .mainmenu a:visited{
-	background: url('TEMPLATE_IMAGE_PATH/nava.png') repeat-x scroll center top transparent;
+	background: url('@{eqdkpTemplateImagePath}nava.png') repeat-x scroll center top transparent;
 	margin-left: 5px;
 	display: block;
 	padding: 10px 15px;
@@ -2219,7 +2180,7 @@ fieldset.raidcal_infos dt, fieldset.moderation_panel dt {
 	padding-top: 0px;
 }
 
-.add_guest{
+.add_guest {
 	display: block;
 	height: 32px;
 	fill: white;
@@ -2229,15 +2190,15 @@ fieldset.raidcal_infos dt, fieldset.moderation_panel dt {
 	line-height: 1.4em;
 }
 
-.default-avatar{
-	background: url(EQDKP_IMAGE_PATHsvg/avatar-default.svg) no-repeat;
+.default-avatar {
+	background: url('@{eqdkpImagePath}global/avatar-default.svg') no-repeat;
 	background-size: contain;
 	display:inline-block;
 	width: 24px;
 	height: 24px;
 }
 
-.default-avatar.small{
+.default-avatar.small {
 	width: 24px;
 	height: 24px;
 }
@@ -3008,24 +2969,26 @@ table.leaderboard tbody tr td table.borderless tbody tr td {
 
 /* Colorpicker */
 .sp-replacer {
+	padding: 4px 6px;
+	color: @eqdkpInputFontColor;
+	background-color: @eqdkpInputBackgroundColor;
+	border: 1px solid @eqdkpInputBorderColor;
 	border-radius: 4px 4px 4px 4px;
-	background-color: #FFFFFF;
-	border: 1px solid #CCCCCC;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
 	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-	padding: 4px 6px;
-	color: #555555;
+	
+	&:hover,
+	&.sp-active {
+		color: @eqdkpInputFontColorActive;
+		background-color: @eqdkpInputBackgroundColorActive;
+		border-color: @eqdkpInputBorderColorActive;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px @eqdkpInputBorderColorActive;
+		outline: 0 none;
+	}
 }
-
-.sp-replacer:hover, .sp-replacer.sp-active {
-	border-color: rgba(82, 168, 236, 0.8);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
-	outline: 0 none;
-}
-
 .sp-container {
-	background-color: #FFFFFF;
-	border: 1px solid #CCCCCC;
+	background-color: @eqdkpInputBackgroundColor;
+	border: 1px solid @eqdkpInputBorderColorActive;
 	border-radius: 4px 4px 4px 4px;
 }
 
@@ -3922,7 +3885,7 @@ button.thirdpartylogin.openid {
 
 .sortable li.mjs-nestedSortable-branch div, .sortable li.mjs-nestedSortable-leaf div {
     border: 1px solid #31628E;
-    background: url('TEMPLATE_IMAGE_PATH/ui-bg_highlight-soft_33_19456b_1x100.png') repeat-x scroll 50% 50% #19456B;
+    background: url('@{eqdkpTemplateImagePath}ui-bg_highlight-soft_33_19456b_1x100.png') repeat-x scroll 50% 50% #19456B;
     border-color: #757575;
     color: #FFF;
 }
