@@ -3897,6 +3897,10 @@ button.thirdpartylogin.openid {
     color: #FFF;
 }
 
-/* Timline Plugin */
-.timeline-years { color: #FFF !important; }
-.timeline-dateblock:before { background: #273D81 !important; }
+/*****************************************
+ * PLUGIN and MODULE adjustments         *
+ *****************************************/
+/* Shoutbox */
+.sb_horizontal .sb_content_container { background-color: #012A48 !important; border-color: #CCC !important; }
+.sb_horizontal .sb_with_avatar.sb_content_container:before { border-color: transparent #CCC !important; }
+.sb_horizontal .sb_with_avatar.sb_content_container:after { border-color: transparent #012A48 !important; }
