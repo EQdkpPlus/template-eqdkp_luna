@@ -3451,7 +3451,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		margin-bottom: 10px;
 	}
 
-	.responsive div.table:not(.noMobileTransform)) {
+	.responsive div.table:not(.noMobileTransform) {
 		display: inline;
 	}
 
@@ -3463,6 +3463,10 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		float: none;
 	}
 
+	.responsive div.leaderboard > div.floatLeft {
+		float: none;
+		width: 100% !important;
+	}
 
 	/* Mobile Navigation */
 	.nav-mobile {
@@ -3895,6 +3899,15 @@ button.thirdpartylogin.openid {
 }
 .sortable li.mjs-nestedSortable-branch div .eye:before, .sortable li.mjs-nestedSortable-leaf div .eye:before {
     color: #FFF;
+}
+
+/* Leaderboard */
+.leaderboard {
+	display: flex;
+	flex-wrap: wrap;
+}
+.leaderboard > div > div{
+	padding: 6px;
 }
 
 /*****************************************
