@@ -3725,6 +3725,10 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.responsive .langswitch-tooltip-trigger > span {
 		display: none;
 	}
+	
+	.responsive #personalAreaUser .user-avatar-smallest>img {
+		margin-top: 4px;
+	}
 }
 
 @media all and (max-width: 590px) {
@@ -3772,7 +3776,18 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.responsive .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
 		float: none;
 	}
+	
+	.responsive .share-text {
+		display: none;
+	}
+	
+	.responsive .social-bookmarks li a.social-bookmarks-count {
+		width: 50px;
+	}
 
+	.responsive #personalAreaUser ul li {
+		margin-right: 10px;
+	}
 }
 
 
