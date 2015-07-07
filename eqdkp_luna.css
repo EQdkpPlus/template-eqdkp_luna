@@ -617,6 +617,7 @@ input[type=radio], input[type=checkbox]{
 	margin-top: -4px;
 	padding: 4px 8px 0px 8px !important;
 	display: none;
+	z-index: 20;
 }
 
 .input-multilang.textarea .multilang-dropdown {
