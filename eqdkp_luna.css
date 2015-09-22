@@ -981,7 +981,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 	padding: 2px;
 }
 
-#contentBody th, .portalbox_content th {
+.table th, .portalbox_content th {
 background: url('@{eqdkpTemplateImagePath}head.jpg') repeat-x scroll 0% 0% #2B577C;
 color: #FFF;
 height: 25px;
@@ -999,7 +999,7 @@ padding-right: 8px;
 */
 }
 
-#contentBody th, #contentBody td {
+.table th, .table td {
 	border-top: 1px solid #515151;
 	border-bottom: 1px solid #515151;
 	line-height: 20px;
@@ -1020,15 +1020,15 @@ padding-right: 8px;
 	border-top: 1px solid #DDDDDD;
 }
 
-#contentBody .row1, .portalbox_content .row1, .colorswitch tr:nth-child(even),.colorswitch>td:nth-child(even), .colorswitch > div:nth-child(even){
+.table .row1, .portalbox_content .row1, .colorswitch tr:nth-child(even), .colorswitch>td:nth-child(even), .colorswitch > div:nth-child(even){
 	background-color: #1D3953;
 }
 
-#contentBody .row2,.portalbox_content .row2,.helpline, .colorswitch tr:nth-child(odd),.colorswitch>td:nth-child(odd), .colorswitch > div:nth-child(odd){
+.table .row2, .portalbox_content .row2, .helpline, .colorswitch tr:nth-child(odd), .colorswitch>td:nth-child(odd), .colorswitch > div:nth-child(odd){
 	background-color: #14293B;
 }
 
-#contentBody th.footer {
+.table th.footer {
 	font-style:italic;
 	font-weight: normal;
 	text-align: right;
@@ -1036,13 +1036,13 @@ padding-right: 8px;
 	border-bottom: none;
 }
 
-#contentBody th a {
+.table th a {
 	text-decoration: none;
 	color: #fff;
 	font-family:'Trebuchet MS',Arial,sans-serif;
 }
 
-#contentBody th a:hover {
+.table th a:hover {
 	color: #c5e5ff;
 }
 
