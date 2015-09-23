@@ -436,28 +436,30 @@ margin-bottom: 20px;
 
 .portalbox_head {
 	white-space: nowrap;
-overflow: hidden;
-color: #FFF;
-background: url('@{eqdkpTemplateImagePath}head.jpg') repeat-x scroll 0% 0% #2B577C;
-height: 28px;
-line-height: 28px;
-font-weight: bold;
-font-size: 11px;
-text-align: left;
-padding: 0px 8px;
+	overflow: hidden;
+	color: #FFF;
+	background: url('@{eqdkpTemplateImagePath}head.jpg') repeat-x scroll 0% 0% #2B577C;
+	height: 28px;
+	line-height: 28px;
+	font-weight: bold;
+	font-size: 11px;
+	text-align: left;
+	padding: 0px 8px;
 }
 
 .portalbox_content {
 	padding: 5px;
 /*	background-color:#F5F5F5;*/
-
-background: none repeat scroll 0% 0% #14293B;
-color: #FFF;
-white-space: normal;
-overflow: hidden;
+	background: none repeat scroll 0% 0% #14293B;
+	color: #FFF;
+	white-space: normal;
+	overflow: hidden;
 }
 
 /* Toggle Buttons for portalbox */
+.portalbox_head .portal_fe_edit { display: none; }
+.portalbox:hover .portal_fe_edit { display: inline; }
+
 .toggle_button:before{
 	content:"\f078";
 	font-family: FontAwesome;
