@@ -54,9 +54,9 @@
 	<menu_item_background_color_hover></menu_item_background_color_hover>
 	<menu_item_font_color_hover></menu_item_font_color_hover>
 	
-	<sidebar_background_color></sidebar_background_color>
-	<sidebar_font_color></sidebar_font_color>
-	<sidebar_border_color></sidebar_border_color>
+	<sidebar_background_color>rgb(20, 41, 59)</sidebar_background_color>
+	<sidebar_font_color>rgb(238, 238, 238)</sidebar_font_color>
+	<sidebar_border_color>rgb(204, 204, 204)</sidebar_border_color>
 	
 	<button_background_color>rgb(0, 149, 205)</button_background_color>
 	<button_font_color>rgb(217, 238, 247)</button_font_color>
