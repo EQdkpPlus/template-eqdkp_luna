@@ -75,7 +75,7 @@ body {
 }
 
 body.simple-header {
-	background: #fff;
+	background: @eqdkpContainerBackgroundColor;
 	margin: 5px;
 }
 
@@ -335,8 +335,8 @@ margin-bottom: 20px;
 #contentContainer {
 	margin-right: 35px;
 	margin-left: 35px;
-	border: 1px solid #AAA;
-	background: rgba(66, 66, 66, 0.8);
+	border: 1px solid @eqdkpContainerBorderColor;
+	background: @eqdkpContainerBackgroundColor;
 	border-radius: 3px;
 	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
@@ -2009,8 +2009,8 @@ overflow: auto;
 .manage_menues_block .toggle_button {
 	font-family: 'Trebuchet MS',Arial,sans-serif;
 	font-weight: bold;
-	border-bottom: 1px solid #CCCCCC;
-	background-color: #EAEAEA;
+	border-bottom: 1px solid @eqdkpContainerBorderColor;
+	background-color: @eqdkpContainerBackgroundColor;
 	padding: 3px;
 }
 
