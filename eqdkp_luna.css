@@ -349,7 +349,7 @@ margin-bottom: 20px;
 }
 #contentBody2 {
 	padding: 5px;
-	background: none repeat scroll 0% 0% #1D3953;
+	background: none repeat scroll 0% 0% darken(@eqdkpContentBackgroundColor, 9) - #001221;
 	text-align: left;
 	border: 1px solid darken(@eqdkpContentBorderColor, 70.1) + #00395F;
 	margin-bottom: 14px;
@@ -435,7 +435,7 @@ margin-bottom: 20px;
 	white-space: nowrap;
 	overflow: hidden;
 	color: #FFF;
-	background: url('@{eqdkpTemplateImagePath}head.jpg') repeat-x scroll 0% 0% #2B577C;
+	background: url('@{eqdkpTemplateImagePath}head.jpg') repeat-x scroll 0% 0% lighten(@eqdkpContentBackgroundColor, 5) - #001931;
 	height: 28px;
 	line-height: 28px;
 	font-weight: bold;
@@ -447,7 +447,7 @@ margin-bottom: 20px;
 .portalbox_content {
 	padding: 5px;
 /*	background-color:#F5F5F5;*/
-	background: none repeat scroll 0% 0% #14293B;
+	background: none repeat scroll 0% 0% darken(@eqdkpContentBackgroundColor, 18) - #000A14;
 	color: #FFF;
 	white-space: normal;
 	overflow: hidden;
@@ -1459,7 +1459,7 @@ ul.breamcrumb a {
 	position: relative;
 	/* text-shadow: 0 1px 0 rgba(255,255,255,.5); */
 	background-color: #fff;
-background-image: linear-gradient(to right, #2b577c, #266399);
+	background-image: linear-gradient(to right, lighten(@eqdkpContentBackgroundColor, 5) - #001931, @eqdkpContentBackgroundColor);
 }
 
 ul.breamcrumb li:first-child a{
@@ -1474,7 +1474,7 @@ ul.breamcrumb li:first-child a i {
 }
 
 ul.breamcrumb a:hover{
-	background: #266399;
+	background: @eqdkpContentBackgroundColor;
 }
 
 ul.breamcrumb a::after,
@@ -1491,17 +1491,17 @@ ul.breamcrumb a::before{
 
 ul.breamcrumb a::after{
 	z-index: 2;
-	border-left-color: #266399;
+	border-left-color: @eqdkpContentBackgroundColor;
 }
 
 ul.breamcrumb a::before{
-	border-left-color: #9f9f9f;
+	border-left-color: lighten(@eqdkpContentBackgroundColor, 39) - #002648;
 	right: -1.1em;
 	z-index: 1;
 }
 
 ul.breamcrumb a:hover::after{
-	border-left-color: #266399;
+	border-left-color: @eqdkpContentBackgroundColor;
 }
 
 ul.breamcrumb .current,
