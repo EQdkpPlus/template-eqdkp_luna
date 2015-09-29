@@ -84,8 +84,9 @@ h1, h2, h3 {
 	font-weight: bold;
 	margin-bottom: 10px;
 	padding-bottom: 5px;
-	border-bottom: 1px solid #CCCCCC;
+	border-bottom: 1px solid @eqdkpContentBorderColor;
 	margin-top: 5px;
+	color: @eqdkpContentFontColorHeadings;
 }
 
 h1 { font-size: 20px; }
@@ -350,7 +351,7 @@ margin-bottom: 20px;
 	padding: 5px;
 	background: none repeat scroll 0% 0% #1D3953;
 	text-align: left;
-	border: 1px solid #195278;
+	border: 1px solid darken(@eqdkpContentBorderColor, 70.1) + #00395F;
 	margin-bottom: 14px;
 	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
@@ -425,7 +426,7 @@ margin-bottom: 20px;
 
 /* Portalbox */
 .portalbox {
-	border: 1px solid #2B577C;
+	border: 1px solid darken(@eqdkpContentBorderColor, 63) + #002C51;
 	margin: 5px;
 	margin-bottom: 14px;
 }
@@ -1052,7 +1053,7 @@ padding-right: 8px;
 }
 
 .contentSubheader {
-	color: #9F9F9F;
+	color: @eqdkpContentFontColor;
 	margin-bottom: 10px;
 	margin-top: 4px;
 }
@@ -1087,7 +1088,7 @@ padding-right: 8px;
 /* Fieldsets */
 
 fieldset.settings legend {
-	border-bottom: 1px solid #CCCCCC;
+	border-bottom: 1px solid @eqdkpContentBorderColor;
 	font-family: 'Trebuchet MS',Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
@@ -1112,14 +1113,14 @@ fieldset.settings dt {
 	width: 55%;
 	text-align: left;
 	border: none;
-	border-right: 1px solid #CCCCCC;
+	border-right: 1px solid @eqdkpContentBorderColor;
 	padding-top: 3px;
 }
 fieldset.settings dd {
 	margin: 0 0 0 55%;
 	padding: 0 0 0 5px;
 	border: none;
-	border-left: 1px solid #CCCCCC;
+	border-left: 1px solid @eqdkpContentBorderColor;
 	vertical-align: middle;
 	font-size: 1.00em;
 	text-align: left;
@@ -1155,10 +1156,10 @@ fieldset.settings dl:after {
 }
 
 fieldset.settings dl:hover dt{
-	border-right: 1px solid #000;
+	border-right: 1px solid darken(@eqdkpContentBorderColor, 80);
 }
 fieldset.settings dl:hover dd{
-	border-left: 1px solid #000;
+	border-left: 1px solid darken(@eqdkpContentBorderColor, 80);
 }
 fieldset.settings dt label {
 	font-size: 1.00em;
@@ -1170,7 +1171,7 @@ fieldset.settings dd label {
 	margin: 0 10px 0 0;
 }
 fieldset.settings dt span {
-	color: #666;
+	color: darken(@eqdkpContentFontColor, 22.2);
 }
 
 img {
@@ -1447,10 +1448,9 @@ hr#system-readmore {
 }
 
 ul.breamcrumb {
-	color: #9F9F9F;
+	color: @eqdkpContentFontColor;
 	font-size: 13px;
-	border-width: 1px;
-	border-style: solid;
+	border: 1px solid darken(@eqdkpContentBorderColor, 17.8);
 	overflow: hidden;
 	width: 100%;
 }
@@ -1945,12 +1945,12 @@ border-radius: 13px;*/
 #notifications,
 #twitterfeed{
 	background: none repeat scroll 0% 0% #14293B;
-margin: 0px;
-padding: 5px;
-border: 1px solid #999;
-height: 200px;
-width: auto;
-overflow: auto;
+	margin: 0px;
+	padding: 5px;
+	border: 1px solid darken(@eqdkpContentBorderColor, 20);
+	height: 200px;
+	width: auto;
+	overflow: auto;
 }
 #notifications a.rss_readmore,
 #twitterfeed a.rss_readmore {
@@ -1992,10 +1992,10 @@ overflow: auto;
 
 /* ACP: manage menues */
 .manage_menues_block {
-	list-style-type: none; padding: 3px; margin:6px; border:1px dashed #666; min-width:180px;
+	list-style-type: none; padding: 3px; margin:6px; border:1px dashed darken(@eqdkpContentBorderColor, 40); min-width:180px;
 }
 .manage_menues_block2 {
-	list-style-type: none; padding: 3px; margin:6px; border:3px dashed #666; min-width:180px;
+	list-style-type: none; padding: 3px; margin:6px; border:3px dashed darken(@eqdkpContentBorderColor, 40); min-width:180px;
 }
 .manage_menues_block ul {
 	margin:0px;
@@ -2003,7 +2003,7 @@ overflow: auto;
 }
 .manage_menues_block li, .manage_menues_block2 li {
 	list-style-type: none; padding: 5px;
-	margin:5px; background-color:#F5F5F5; cursor:pointer; color:#666;
+	margin:5px; background-color:#F5F5F5; cursor:pointer; color: darken(@eqdkpContentFontColor, 22.2);
 }
 
 .manage_menues_block .toggle_button {
