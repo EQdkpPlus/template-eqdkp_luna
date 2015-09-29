@@ -384,7 +384,7 @@ margin-bottom: 20px;
 }
 
 .contentContrast h1, .contentContrast h2, .contentContrast h3 {
-	color: @eqdkpContentContrastColor;
+	color: @eqdkpContentFontColorHeadings;
 }
 
 #contentFooter {
