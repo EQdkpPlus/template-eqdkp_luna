@@ -11,6 +11,7 @@
 	<background_type>0</background_type>
 	<background_img></background_img>
 	<background_pos>normal</background_pos>
+	<editor_theme>charcoal</editor_theme>
 	
 	<body_background_color>rgb(0, 0, 0)</body_background_color>
 	<body_font_color>rgb(238, 238, 238)</body_font_color>
