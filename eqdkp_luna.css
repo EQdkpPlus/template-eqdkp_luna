@@ -3358,6 +3358,8 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.responsive #personalArea, .responsive #header, .responsive #footer {
 		padding-right: 10px;
 		padding-left: 10px;
+		margin-right: 0;
+		margin-left: 0;
 	}
 
 	.responsive #contentContainer {
@@ -3513,7 +3515,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	}
 
 	.responsive button.ui-multiselect {
-		width: auto !important;
+		width: 100% !important;
 	}
 
 	.responsive.simple-header.mobile .floatRight {
@@ -3679,6 +3681,12 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	#bottommenu_admin, #bottommenu_chars{
 		width: 90% !important;
 	}
+
+	// relocate portal modules
+	.portal .columnContainer { display:flex; flex-flow:column nowrap; }
+	.portal .columnContainer .first.column { order:1; }
+	.portal .columnContainer .second.column { order:0; }
+	.portal .columnContainer .third.column { order:2; }	
 }
 
 @media all and (max-width: 590px) {
@@ -4252,8 +4260,24 @@ label.isBoolean > input[type="radio"]:checked + span.green, label.isBoolean > sp
 }
 /* End Boolean Boxes */
 
+/* Iframe widget */
+body.module-iframe {
+	background: transparent;
+	margin: 0;
+}
 
+.module-iframe #contentBody, .module-iframe #contentBody2 {
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
 
+.module-iframe #plus_debug_tabs {
+	display: none;
+} 
+
+.fa-inverse{color: #000;}
 
 /*****************************************
  * PLUGIN and MODULE adjustments         *
