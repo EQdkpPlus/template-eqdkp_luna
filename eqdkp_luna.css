@@ -2731,7 +2731,7 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 	max-height: 48px;
 }
 
-.user-avatar-small, .user-avatar-small img {
+.user-avatar-small, .user-avatar-small, .user-avatar.small {
 	max-height: 32px;
 }
 
@@ -2739,7 +2739,7 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 	max-height: 24px;
 }
 
-.user-avatar-border img {
+img.user-avatar, .user-avatar img {
 	border: 1px solid #CCCCCC;
 	border-radius: 4px 4px 4px 4px;
 	background-color: #FFFFFF;
@@ -4130,7 +4130,7 @@ button.thirdpartylogin.discord {
 }
 
 .list-type4 {
-	display:flex;
+	display:flex; 
 	flex-wrap: wrap;
 }
 
@@ -4143,9 +4143,6 @@ button.thirdpartylogin.discord {
 }
 
 .list-type4 .article-banner-image {
-	align-items:center;
-	display:flex;
-	max-height:160px;
 	overflow:hidden;
 }
 
